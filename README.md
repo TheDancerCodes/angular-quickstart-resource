@@ -1,7 +1,11 @@
-# Angular QuickStart Source
-[![Build Status][travis-badge]][travis-badge-url]
+# Angular QuickStart Resource
 
-This repository holds the TypeScript source code of the [angular.io quickstart](https://angular.io/docs/ts/latest/quickstart.html),
+This repository demonstrates how to quickly set up and get going with the Angular
+QuickStart Resource found on [angular.io quickstart](https://angular.io/docs/ts/latest/quickstart.html).
+
+Set up coming soon. :)
+
+<!-- This repository holds the TypeScript source code of the [angular.io quickstart](https://angular.io/docs/ts/latest/quickstart.html),
 the foundation for most of the documentation samples and potentially a good starting point for your application.
 
 It's been extended with testing support so you can start writing tests immediately.
@@ -32,11 +36,11 @@ Now you can continue working on the new project.
 
 ## Prerequisites
 
-Node.js and npm are essential to Angular development. 
-    
+Node.js and npm are essential to Angular development.
+
 <a href="https://docs.npmjs.com/getting-started/installing-node" target="_blank" title="Installing Node.js and updating npm">
 Get it now</a> if it's not already installed on your machine.
- 
+
 **Verify that you are running at least node `v4.x.x` and npm `3.x.x`**
 by running `node -v` and `npm -v` in a terminal/console window.
 Older versions produce errors.
@@ -88,7 +92,7 @@ git add .
 git commit -m "Initial commit"
 ```
 
->Recover the deleted `.gitignore` from the QuickStart repository 
+>Recover the deleted `.gitignore` from the QuickStart repository
 if you lost it in the _Delete non-essential files_ step.
 
 Create a *remote repository* for this project on the service of your choice.
@@ -111,7 +115,7 @@ npm start
 
 >Doesn't work in _Bash for Windows_ which does not support servers as of January, 2017.
 
-The `npm start` command first compiles the application, 
+The `npm start` command first compiles the application,
 then simultaneously re-compiles and runs the `lite-server`.
 Both the compiler and the server watch for file changes.
 
@@ -184,4 +188,4 @@ which is easier to read; this file is excluded from source control.
 Shut it down manually with `Ctrl-C`.
 
 [travis-badge]: https://travis-ci.org/angular/quickstart.svg?branch=master
-[travis-badge-url]: https://travis-ci.org/angular/quickstart
+[travis-badge-url]: https://travis-ci.org/angular/quickstart -->
