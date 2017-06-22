@@ -7,14 +7,20 @@ import { Component } from '@angular/core';
     <p><i>{{name}} is in the {{region}} region.</i></p>
     <br/>
 
-    <input [value]="name"><br/>
-    <input [value]="name" (input)="name=$event.target.value"><br/>
-    <input [value]="name" (keyup)="name=$event.target.value"><br/>
-    <input [value]="name" (keyup.enter)="name=$event.target.value"
-                          (blur)="name=$event.target.value"><br/>
+    <fieldset>
+        <label>Name:</label><br/>
+        <input [value]="name"><br/>
+        <input [value]="name" (input)="name=$event.target.value"><br/>
+        <input [value]="name" (keyup)="name=$event.target.value"><br/>
+        <input [value]="name" (keyup.enter)="name=$event.target.value"
+                              (blur)="name=$event.target.value"><br/>
 
+        <input [(ngModel)]="name"><br/>
+        <input [ngModel]="name" (ngModelChange)="name=$event"><br/>
+    </fieldset>
 
-    <button (click)="addressClick()">Show/Hide Address</button>
+    <label><input type="checkbox" [(ngModel)]="hideAddress">Hide Address</label>
+
     <div [hidden]="hideAddress">
       <fieldset>
         <label>Street: </label>{{street}}
