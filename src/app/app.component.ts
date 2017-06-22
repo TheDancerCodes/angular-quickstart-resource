@@ -4,33 +4,26 @@ import { Component } from '@angular/core';
   selector: 'my-app', // to use me, do this in html <my-app>
   template: `
     <h1>{{name}}</h1>
-    <p><i>{{name}} is in the {{region}} region.</i></p>
+
+    <p><i>{{name}} is at {{street}} in {{city}} in the {{region}} region.</i></p>
     <br/>
 
     <fieldset>
-        <label>Name:</label><br/>
-        <input [value]="name"><br/>
-        <input [value]="name" (input)="name=$event.target.value"><br/>
-        <input [value]="name" (keyup)="name=$event.target.value"><br/>
-        <input [value]="name" (keyup.enter)="name=$event.target.value"
-                              (blur)="name=$event.target.value"><br/>
-
-        <input [(ngModel)]="name"><br/>
-        <input [ngModel]="name" (ngModelChange)="name=$event"><br/>
+        <label>Name: <input [(ngModel)]="name"></label>
     </fieldset>
 
     <label><input type="checkbox" [(ngModel)]="hideAddress">Hide Address</label>
 
     <div [hidden]="hideAddress">
       <fieldset>
-        <label>Street: </label>{{street}}
+        <label>Street: <input [(ngModel)]="street"></label>
       </fieldset>
       <fieldset>
-        <label>City: </label>{{city}}
+        <label>City: <input [(ngModel)]="city"></label>
       </fieldset>
       <fieldset>
         <label>Region: </label>
-        <select (change)="regionChange($event.target.value)">
+        <select [(ngModel)]="region">
           <option>north</option>
           <option>south</option>
           <option>east</option>
@@ -47,14 +40,4 @@ export class AppComponent  {
     street = 'Koinage Street';
     hideAddress = false;
     region = 'east';
-
-    addressClick() {
-        this.hideAddress = !this.hideAddress;
-
-    }
-
-    regionChange(region: string) {
-        this.region = region;
-    }
-
 }
