@@ -22,9 +22,9 @@
             <label>Name: <input [(ngModel)]="customer.name"></label>
         </fieldset>
 
-        <label><input type="checkbox" [(ngModel)]="hideAddress">Hide Address</label>
+        <label><input type="checkbox" [(ngModel)]="showAddress">Show Address</label>
 
-        <div [hidden]="hideAddress">
+        <div *ngIf="showAddress">
           <fieldset>
             <label>Street: <input [(ngModel)]="customer.address.street"></label>
           </fieldset>
@@ -34,10 +34,7 @@
           <fieldset>
             <label>County: </label>
             <select [(ngModel)]="customer.address.county">
-              <option>Kakamega</option>
-              <option>Kiambu</option>
-              <option>Kilifi</option>
-              <option>Turkana</option>
+              <option *ngFor="let county of counties">{{county}}</option>
             </select>
           </fieldset>
           <fieldset>

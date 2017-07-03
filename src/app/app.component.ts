@@ -10,6 +10,7 @@ import { Customer } from './model';
 })
 export class AppComponent  {
     regions = ['North', 'South', 'East', 'West', 'NorthEast'];
+    counties = [' Kakamega', 'Kiambu', 'Kilifi', 'Turkana'];
 
     customers: Customer[] = [
     {
@@ -56,5 +57,5 @@ export class AppComponent  {
 
   customer: Customer; // = this.customers[0];
 
-    hideAddress = false;
+    showAddress = true;
 }
